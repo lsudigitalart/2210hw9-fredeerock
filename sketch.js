@@ -22,9 +22,11 @@ function Starship(tempWingspan, tempSpeed, tempXPosition) {
   this.wingspan = tempWingspan;
   this.speed = tempSpeed;
   this.xPosition = tempXPosition;
+  this.fillColor = color(random(255), random(255), random(255));
   var ey = 0;
 
   this.display = function() {
+    fill(this.fillColor);
     ellipse(this.xPosition, ey, this.wingspan);
   };
 
@@ -36,6 +38,7 @@ function Starship(tempWingspan, tempSpeed, tempXPosition) {
     if(mouseX > this.xPosition) {
       ey = 0;
     }
+
   };
 
 }
